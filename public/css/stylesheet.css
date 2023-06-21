@@ -455,6 +455,12 @@ input:checked+.slider:before {
 display: none;
 
 }
+.cta{
+  
+  width: 80%;
+ }
+.wrapper{ display: flex;
+  justify-content: center;}
 .sectionHeading{ font-size:1.3em ;}
 .PersonalDescription{
   font-size: 0.48em;
@@ -472,6 +478,7 @@ font-weight:300;}
 input{
 height: 20px;}
 .inputFields{margin: 0%;
-padding: 0 2em;}
+padding: 0 2em;
+font-size: xx-small;}
 
 }
