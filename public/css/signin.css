@@ -34,7 +34,8 @@ label {
 
 .Project-name:hover {
   color: #6225e6;
-  transition: 0.3s ease-out 0s
+  transition:  0.3s ease-out 0s;
+ 
 }
 
 #pageContents {
@@ -123,7 +124,7 @@ textarea {
   padding: 1px 5px;
   text-decoration: none;
   list-style: none;
-  font-family: Poppins, sans-serif;
+ 
   font-size: 21px;
   color: white;
   background: #6225e6;
@@ -231,13 +232,7 @@ path.two {
   transition: max-height 0.3s ease-out 0s;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1em;
-}
+
 
 .socials {
   display: flex;
@@ -332,7 +327,8 @@ nav {
 .sectionHeading:hover {
   color: rgb(98, 37, 230);
   font-weight: bold;
-  transition: 0.3s ease-out 0s
+  transition: 0.3s ease-out 0s;
+
 }
 
 .sectionHeading {
