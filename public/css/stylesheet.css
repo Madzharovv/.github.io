@@ -435,7 +435,7 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .heroGif{
     transform: scale(0.7);
   }
