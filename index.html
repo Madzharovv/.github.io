@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
@@ -15,60 +16,380 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="public/css/signin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100&display=swap" rel="stylesheet">
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+
   <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
   <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
 
+  <link rel="icon" href="/public/images/Logo.png" type="image/x-icon">
 
-  <meta name="theme-color" content="#712cf9">
+  <!-- Charts -->
 
-  <!-- Custom styles for this template -->
-
-</head>
-
-<body class="text-center">
-
-  <main class="form-signin w-100 m-auto">
-    <img class="mimojiimage" src="public/images/mimoji.png" width="170" height="170" alt="profile picture">
-    <H1>Hey! </H1>
-    <p>I am currently refashioning my personal webiste and for the time being it will be hidden away from the public,
-      however you can drop me a message and I will get back to you soon!</p>
-
-    <form id="form">
-      <div class="form-floating">
-        <div class="headsss">Your Name</div>
-        <label for="floatingPassword"></label>
-        <input class="form-control" type="textYourName" name="your_name" id="your_name">
-      </div>
-      <div class="form-floating">
-        <div class="headsss">Email</div>
-        <label for="floatingPassword"> </label>
-        <input class="form-control" type="textEmail" name="email" id="email">
-      </div>
-      <div class="form-floating">
-        <div class="headsss">Message</div>
-        <label for="floatingInput"></label>
-        <input class="form-control" type="textMessage" name="message" id="message">
-      </div>
-
-      <input onclick="sendMail" class="w-100 btn btn-lg btn-primary" type="submit" id="button" value="Send">
-    </form>
-
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-    emailjs.init('1MDKpNASjtfOOgg4F')
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Language');
+      data.addColumn('number', 'Years Experience');
+      data.addColumn({
+        type: 'string',
+        role: 'style'
+      });
+      data.addRows([
+        ['HTML', 5, '#e34c26'],
+        ['CSS', 5, '#264de4'],
+        ['JavaScript', 4, '#f0db4f'],
+        ['Java', 3, '#1FBED6'],
+        ['SQL', 3, '#F29111'],
+        ['PHP', 3, '#8993be'],
+        ['C++', 1, '#044F88'],
+        ['Python', 1, '#FFD43B'],
+        ['Haskell', 1, '#A020F0'],
+        ['Elm', 1, '#7fd13b']
+      ]);
+
+      var options = {
+
+        width: 700,
+        height: 300,
+        legend: 'none',
+        backgroundColor: '#000000',
+        hAxis: {
+          title: 'Years',
+          titleTextStyle: {
+            fontSize: 14,
+            color: '#ffffff',
+            fontName: 'Lexend Peta'
+          },
+          textStyle: {
+            color: '#ffffff',
+            fontName: 'Lexend Peta'
+          }
+        },
+        vAxis: {
+          textStyle: {
+            color: '#ffffff',
+            fontName: 'Lexend Peta'
+          }
+        }
+
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+      chart.draw(data, options);
+    }
   </script>
-  <script src="public/js/script.js"></script>
-  </main>
+
+<body>
+
+  <div class="pageContainer">
+   
+    
+      <div class="socials">
+        <div class="socialIcons"><a href="https://twitter.com/VMadzharov/"><img width="20px" height="20px" src="./public/images/twitter-16.ico" alt=""></a></div>
+        <div class="socialIcons"><a href="https://github.com/Madzharovv"><img src="./public/images/github-mark-white.png" 
+         height="20px" alt="Github"></a></div>
+        <div class="socialIcons"><a href="mailto:madzharovv@gmail.com"><img src="./public/images/envelop.ico" alt=""></a></div>
+      </div>
+   
+    <div class="heroContainer">
+      <div class="titles">
+
+        <h1 class="titleName">Valentin Madzharov's</h1>
+        <h2 class="portfolioTitle">Portfolio</h2>
+        <img class="heroGif" src="/public/images/giphy.gif" alt="world gif">
+        <p class="scrl">Scroll down</p>
+      </div>
+
+    </div>
+    <main>
+      <div class="pageContents" id="pageContents">
+        <div class="meContainer">
+          <div class="Section">
+            <h1 class="sectionHeading" id="toggleMeHeading">Info <div class="arrow">▼▼▼</div>
+            </h1>
+            <div class="meContent">
+              <p>
+                Enthusiastic web developer who
+                recently
+                graduated from City University of London<img class="cityicon"
+                src="/public/images/city.png" height="27" lenght="4px"></img>with the passion to create immersive user experiences by crafting responsive and secure
+                websites.
+                My journey in web development began in my first year of college, where I created a simple blog website
+                however, throughout my time at university, I developed a number of more complex projects. My passion
+                became
+                stronger as I worked on the more complicated projects as they allowed me to understand the
+                transformative
+                potential of the digital realm. Creating impactful websites that connect people and businesses has
+                become
+                my
+                driving force. I thrive on continuous learning, mastering code, and embracing creative challenges.
+                Seeing
+                my
+                work come to life and positively impact others is what propels me forward.
+
+              </p>
+              <div class="skillsContainer">
+                <h3>My Coding Experience of different languages
+                  in years
+                </h3>
+
+                <!-- Div that holds the bar chart -->
+                <div id="barchart_div"></div>
+              </div>
+              <div class="skillsContainer">
+                <a class="CV" href="./public/docs/CV.pdf">CV ▾</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projectsContainer">
+          <div class="Section">
+            <h1 class="sectionHeading" id="toggleProjectsHeading">Projects <div class="arrow">▼▼▼</div>
+            </h1>
+            <div class="projectsContent">
+              <div class="project">
+                <a href="https://github.com/Madzharovv/Achiever" class="Project-name"> Achiever ◂</a>
+                <div class="projDescription">
+                  <p>Achiever is a project allows students to manage their time efficiently,
+                    enabling
+                    them to cope with higher academics and incorporate any extracurricular activity they would like to
+                    include in their daily routine to maintain a happy life balance. With the use of features like a
+                    customisable
+                    timetable and task and notes lists wilkll enhance the users productivity and efficiency levels.</p>
+                </div>
+              </div>
+              <div class="project">
+                <a href="https://github.com/Madzharovv/Galaxy-Portals-I" class="Project-name"> Galaxy Portals  ◂</a>
+                <div class="projDescription">
+                  <p>Galaxy Portals I is a Java-based 2D Arcade game that takes you on a perilous journey across the
+                    galaxy. Your mission is to survive while collecting energy balls along the way. Navigate through
+                    challenging levels, carefully choosing the best paths to reach each portal and avoiding enemies.
+                    Enjoy the convenience of saving and loading features, and immerse yourself in the captivating
+                    ambiance of fitting background music.</p>
+                </div>
+
+              </div>
+              <div class="project">
+                <a href="https://github.com/Madzharovv/GARITS" class="Project-name"> GARITS ◂</a>
+                <div class="projDescription">
+                  <p>The Website System (GARITS) was created for automobile mechanics and their businesses, allowing
+                    them to efficiently manage customer records, vehicle details, servicing jobs, parts inventory, and
+                    job invoices.
+
+                    When a vehicle is scheduled for servicing, GARITS generates a comprehensive job sheet for the
+                    mechanic, outlining the required tasks. Once the job is completed, the system calculates the total
+                    time spent and the cost of spare parts, generating an accurate invoice for the customer.
+
+                    The parts record keeps track of part quantities, automatically triggering reordering when stock
+                    levels are low.
+
+                    Throughout the system's design process, user-friendliness was prioritized, ensuring ease of use for
+                    all users. Additionally, robustness, efficiency, and security were key considerations, ensuring a
+                    reliable and effective system.</p>
+                </div>
+
+              </div>
+              <div class="project">
+                <a href="https://github.com/Madzharovv/AIProject" class="Project-name"> House Price Prediction using an
+                  AI Regression Model ◂</a>
+                <div class="projDescription">
+                  <p>The objective of the project was to develop a property price prediction
+                    system with precise accuracy using regression models. Significantly influential property features
+                    were
+                    carefully considered to ensure the most accurate predictions. The focus was on identifying the
+                    impact
+                    of each property feature on the overall price, distinguishing between significant and insignificant
+                    factors.</p>
+                </div>
+
+              </div>
+              <div class="project">
+                <a href="https://github.com/Madzharovv/Data-Visualisation" class="Project-name"> Data visualisation on
+                  the three point shot changing and its
+                  impact on the NBA ◂</a>
+                <div class="projDescription">
+                  <p>This project aims to analyse the development and the significance of the three-point shot in
+                    basketball in the NBA,
+                    as well as Stephen Curry's influence on the game. Using data visualization from
+                    sources like Stathead.com and Basketball-Reference.com, trends, patterns, and media
+                    narratives will be explored. By presenting data visually, the aim is to gain insights, challenge
+                    existing beliefs, and
+                    form educated opinions on NBA basketball.</p>
+                </div>
+
+              </div>
+              <div class="project">
+                <a href="https://github.com/Madzharovv/Cleaning-Company-Basic-Website" class="Project-name"> Cleaning
+                  Company Website ◂</a>
+                <div class="projDescription">
+                  <p>A basic booking website developed for a cleaning company, providing options for both routine and
+                    one-off cleaning services.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 
+        <div class="contactMeContainer">
+          <div class="Section">
+            <h1 class="sectionHeading" id="toggleContactMeHeading">Contact <div class="arrow">▼▼▼</div>
+            </h1>
+            <div class="contactMeContent">
+              <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+              <div class="contactmeContainer">
+                <form id="form">
+                  <div class="emailMessageComponent">
+                    <div class="imgAlign">
+                      <img class="mimojiimage" src="public/images/mimoji.png" width="170" height="170"
+                        alt="profile picture">
+                    </div>
+                    <div class="inputFields">
+                      <label class="text">You Name</label><br>
+                      <input required type="textYourName" name="your_name" id="your_name">
+                    </div>
+                    <div class="inputFields">
+                      <label class="text">Email</label><br>
+                      <input required type="textEmail" name="email" id="email">
+                    </div>
+                    <div class="inputFields">
+                      <label class="text">Message</label><br>
+                      <textarea required type="textMessage" name="message" id="message" maxlength="75" height="50px"
+                        width="50px"></textarea>
+                    </div>
+                    <div class="inputFields">
+                      <div class="wrapper">
+                        <button class="cta" onclick="sendMail" type="submit" id="button" value="Send">
+                         
+Send
+                            <svg  class="svgArrows" width="36px" height="23px" viewBox="0 0 66 43" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path class="one"
+                                  d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                  fill="#FFFFFF"></path>
+                                <path class="two"
+                                  d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                  fill="#FFFFFF"></path>
+                                <path class="three"
+                                  d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                  fill="#FFFFFF"></path>
+                              </g>
+                            </svg>
+                       
+                        </button>
+                      </div>
+                    </div>
+                </form>
+              </div>
+              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+              </script>
+              <script type="text/javascript">
+                emailjs.init('1MDKpNASjtfOOgg4F')
+              </script>
+              <script src="public/js/script.js"></script>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function togglemeSection() {
+            var section = this.parentNode;
+            var content = section.querySelector(".meContent");
+
+            if (content.classList.contains("show")) {
+              content.classList.remove("show");
+            } else {
+              content.classList.add("show");
+            }
+          }
+
+          var toggleHeading = document.getElementById("toggleMeHeading");
+          toggleHeading.addEventListener("click", togglemeSection);
+        </script>
+
+
+        <script>
+          function toggleContactmeSection() {
+            var section = this.parentNode;
+            var content = section.querySelector(".contactMeContent");
+
+            if (content.classList.contains("show")) {
+              content.classList.remove("show");
+            } else {
+              content.classList.add("show");
+            }
+          }
+
+          var toggleHeading = document.getElementById("toggleContactMeHeading");
+          toggleHeading.addEventListener("click", toggleContactmeSection);
+        </script>
+
+
+        <script>
+          function toggleProjectSection() {
+            var section = this.parentNode;
+            var content = section.querySelector(".projectsContent");
+
+            if (content.classList.contains("show")) {
+              content.classList.remove("show");
+            } else {
+              content.classList.add("show");
+            }
+          }
+
+          var toggleHeading = document.getElementById("toggleProjectsHeading");
+          toggleHeading.addEventListener("click", toggleProjectSection);
+        </script>
+
+
+        <script>
+          function togglehobbiesSection() {
+            var section = this.parentNode;
+            var content = section.querySelector(".hobbiesContent");
+
+            if (content.classList.contains("show")) {
+              content.classList.remove("show");
+            } else {
+              content.classList.add("show");
+            }
+          }
+
+          var toggleHeading = document.getElementById("toggleHobbiesHeading");
+          toggleHeading.addEventListener("click", togglehobbiesSection);
+        </script>
+
+        <script>
+          window.addEventListener('scroll', function () {
+            var section = document.getElementById('pageContents');
+            var scrollPosition = window.scrollY || window.pageYOffset;
+            var scrollPercentage = (scrollPosition / (document.documentElement.scrollHeight - window.innerHeight)) *
+              100;
+
+            if (scrollPercentage > 15) {
+              section.classList.add('visible');
+            } else {
+              section.classList.remove('visible');
+            }
+          });
+        </script>
+      </div>
+    </main>
+  </div>
 </body>
 
 </html>
