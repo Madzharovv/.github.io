@@ -468,17 +468,18 @@ display: none;
 .cityicon{width: 10px;
 height: 10px;}
 .pageContainer{padding: 0 0.05em;}
-
+.contactMeContent{padding-top: 1em;}
 .Project-name{ font-size:1em ;}
 .projDescription{ font-size:0.48em ;}
-.mimojiimage{width: 100px;
-height: 100px;}
-.text{font-size:0.6em ;
-font-weight:300;}
+.mimojiimage{width: 120px;
+height: 120px;
+padding:  0em 0em 1em 0em;}
+.text{font-size:1.5em ;
+font-weight: bold;}
 input{
 height: 20px;}
 .inputFields{margin: 0%;
-padding: 0 2em;
+padding: 0.5em 2em;
 font-size: xx-small;}
 
 }
