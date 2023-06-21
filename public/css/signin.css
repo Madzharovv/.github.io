@@ -426,7 +426,7 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
+
 .slider.round {
   border-radius: 34px;
 }
@@ -436,5 +436,44 @@ input:checked+.slider:before {
 }
 
 @media only screen and (max-width: 480px) {
-  .heroGif{}
+  .heroGif{
+    transform: scale(0.8);
+  }
+  .titleName{ font-size: 1.8em;}
+
+.titles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolioTitle {
+  font-size: 1em;
+}
+.skillsContainer{
+display: none;
+
+}
+.sectionHeading{ font-size:1.3em ;}
+.PersonalDescription{
+  font-size: 0.48em;
+}
+.cityicon{width: 10px;
+height: 10px;}
+.pageContainer{padding: 0 0.05em;}
+
+.Project-name{ font-size:1em ;}
+.projDescription{ font-size:0.48em ;}
+.mimojiimage{width: 100px;
+height: 100px;}
+.text{font-size:0.6em ;
+font-weight:300;}
+input{
+height: 20px;}
+.inputFields{margin: 0%;
+padding: 0 2em;}
+.contactMeContent{
+  padding: 0%;
+}
 }
