@@ -306,7 +306,7 @@ path.two {
 }
 
 .CV {
-  font-size: larger;
+  font-size: 1.65em;
   font-weight: lighter;
   text-decoration: none;
   color: rgb(0, 0, 0);
@@ -534,7 +534,7 @@ path.two {
 
 .sectionHeading:hover {
   color: #000000;
-  font-weight: bold;
+  font-weight: 1000em;
   transition: 0.3s ease-out 0s;
 }
 
@@ -769,4 +769,10 @@ input:checked+.slider:before {
     height: 125px;
 
   }
+}
+
+.languagePfont{
+  font-weight: lighter;
+  font-size: small;
+  opacity: 0.4;
 }
