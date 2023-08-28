@@ -31,6 +31,67 @@
   <!-- Charts -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+
+<script type="text/javascript">
+  google.charts.load('current', {
+    'packages': ['corechart']
+  });
+
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Language');
+    data.addColumn('number', 'Years Experience');
+    data.addColumn({
+      type: 'string',
+      role: 'style'
+    });
+    data.addRows([
+      ['HTML', 5, '#e34c26'],
+      ['CSS', 5, '#264de4'],
+      ['JavaScript', 4, '#f0db4f'],
+      ['Java', 3, '#1FBED6'],
+      ['SQL', 3, '#F29111'],
+      ['PHP', 3, '#8993be'],
+      ['C++', 1, '#044F88'],
+      ['Python', 1, '#FFD43B'],
+      ['Haskell', 1, '#A020F0'],
+      ['Elm', 1, '#7fd13b']
+    ]);
+
+    var options = {
+
+      width: 600,
+      height: 400,
+      legend: 'none',
+      backgroundColor: '#ffffff',
+      hAxis: {
+        title: 'Years',
+        titleTextStyle: {
+          fontSize: 14,
+          color: '#000000',
+          fontName: 'Lexend Peta'
+        },
+        textStyle: {
+          color: '#000000',
+          fontName: 'Lexend Peta'
+        }
+      },
+      vAxis: {
+        textStyle: {
+          color: '#000000',
+          fontName: 'Lexend Peta'
+        }
+      }
+
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+    chart.draw(data, options);
+  }
+</script>
   </head>
 
 
@@ -585,64 +646,4 @@
 
 
 
-
-<script type="text/javascript">
-  google.charts.load('current', {
-    'packages': ['corechart']
-  });
-
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Language');
-    data.addColumn('number', 'Years Experience');
-    data.addColumn({
-      type: 'string',
-      role: 'style'
-    });
-    data.addRows([
-      ['HTML', 5, '#e34c26'],
-      ['CSS', 5, '#264de4'],
-      ['JavaScript', 4, '#f0db4f'],
-      ['Java', 3, '#1FBED6'],
-      ['SQL', 3, '#F29111'],
-      ['PHP', 3, '#8993be'],
-      ['C++', 1, '#044F88'],
-      ['Python', 1, '#FFD43B'],
-      ['Haskell', 1, '#A020F0'],
-      ['Elm', 1, '#7fd13b']
-    ]);
-
-    var options = {
-
-      width: 600,
-      height: 400,
-      legend: 'none',
-      backgroundColor: '#ffffff',
-      hAxis: {
-        title: 'Years',
-        titleTextStyle: {
-          fontSize: 14,
-          color: '#000000',
-          fontName: 'Lexend Peta'
-        },
-        textStyle: {
-          color: '#000000',
-          fontName: 'Lexend Peta'
-        }
-      },
-      vAxis: {
-        textStyle: {
-          color: '#000000',
-          fontName: 'Lexend Peta'
-        }
-      }
-
-    };
-
-    var chart = new google.visualization.BarChart(document.getElementById('barchart_div'));
-    chart.draw(data, options);
-  }
-</script>
 </html>
